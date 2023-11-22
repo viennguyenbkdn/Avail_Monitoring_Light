@@ -3,9 +3,6 @@ global:
   evaluation_interval: 30s # Evaluate rules every 30 seconds.
 
 scrape_configs:
-  - job_name: "Avail"
+  - job_name: "Avail_Light"
     static_configs:
-      - targets: [ "HOST_IP:10616" ]  
-  - job_name: "Node"
-    static_configs:
-      - targets: [ "node-exporter:9100" ]
+      - targets: [ "otel-collector:8889" ]
